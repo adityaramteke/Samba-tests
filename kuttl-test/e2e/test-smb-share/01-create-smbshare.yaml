@@ -3,6 +3,7 @@ apiVersion: v1
 kind: Secret
 metadata:
   name: smbuser
+  namespace: samba-operator-system
 type: Opaque
 stringData:
   demousers: |
@@ -27,6 +28,7 @@ apiVersion: samba-operator.samba.org/v1alpha1
 kind: SmbSecurityConfig
 metadata:
   name: mysmbusers
+  namespace: samba-operator-system
 spec:
   mode: user
   users:
@@ -38,6 +40,7 @@ apiVersion: samba-operator.samba.org/v1alpha1
 kind: SmbShare
 metadata:
   name: myshare
+  namespace: samba-operator-system
 spec:
   securityConfig: mysmbusers
   readOnly: false
