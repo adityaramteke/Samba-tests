@@ -1,0 +1,10 @@
+---
+apiVersion: v1
+kind: Pod
+metadata:
+  name: smbclient
+  labels:
+    app: samba-operator-test-smbclient
+  namespace: samba-operator-system
+status:
+  phase: Running
