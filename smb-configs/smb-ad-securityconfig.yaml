@@ -1,0 +1,11 @@
+apiVersion: samba-operator.samba.org/v1alpha1
+kind: SmbSecurityConfig
+metadata:
+  name: mydomain
+spec:
+  mode: active-directory
+  realm: mysambanetwork.qe
+  joinSources:
+  - userJoin:
+      secret: join1
+      key: join.json
