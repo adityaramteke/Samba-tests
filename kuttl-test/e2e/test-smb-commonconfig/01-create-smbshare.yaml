@@ -1,0 +1,25 @@
+---
+apiVersion: samba-operator.samba.org/v1alpha1
+kind: SmbCommonConfig
+metadata:
+  name: mypublished
+spec:
+  network:
+    publish: external
+
+---
+apiVersion: samba-operator.samba.org/v1alpha1
+kind: SmbShare
+metadata:
+  name: myshare
+spec:
+  commonConfig: mypublished
+  readOnly: false
+  storage:
+    pvc:
+      spec:
+        accessModes:
+          - ReadWriteOnce
+        resources:
+          requests:
+            storage: 1Gi
