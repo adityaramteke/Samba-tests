@@ -21,7 +21,7 @@ make deploy
 kubectl kuttl test ./kuttl-test/e2e
 ```
 
-* Run specific test case:
+* Run specific test:
 ```
 kubectl kuttl test ./kuttl-test/e2e/test-smb-share
 ```
