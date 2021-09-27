@@ -16,3 +16,8 @@ make deploy
 ```
 
 ## Run test
+Let's run this test suite:
+```
+kubectl kuttl test ./kuttl-test/e2e
+```
+
