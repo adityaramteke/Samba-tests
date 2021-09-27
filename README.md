@@ -16,8 +16,24 @@ make deploy
 ```
 
 ## Run test
-Let's run this test suite:
+* Let's run this test suite:
 ```
 kubectl kuttl test ./kuttl-test/e2e
 ```
 
+* Run specific test case:
+```
+kubectl kuttl test ./kuttl-test/e2e/test-smb-share
+```
+
+* Run test with test suite:
+```yaml
+apiVersion: kuttl.dev/v1beta1
+kind: TestSuite
+testDirs:
+- ./kuttl-test/e2e/
+startKIND: false
+```
+```
+kubectl kuttl test
+```
