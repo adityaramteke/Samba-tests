@@ -10,3 +10,9 @@ is sufficient.
 Install [KUbernetes Test TooL (KUTTL)](https://github.com/kudobuilder/kuttl)
 binaries for linux from [release page](https://github.com/kudobuilder/kuttl/releases).
 
+Make sure to configure the [Samba Operator](https://github.com/samba-in-kubernetes/samba-operator):
+```
+make deploy
+```
+
+## Run test
