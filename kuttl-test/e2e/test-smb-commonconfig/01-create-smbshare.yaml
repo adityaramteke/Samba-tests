@@ -3,6 +3,7 @@ apiVersion: samba-operator.samba.org/v1alpha1
 kind: SmbCommonConfig
 metadata:
   name: mypublished
+  namespace: samba-operator-system
 spec:
   network:
     publish: external
@@ -12,6 +13,7 @@ apiVersion: samba-operator.samba.org/v1alpha1
 kind: SmbShare
 metadata:
   name: myshare
+  namespace: samba-operator-system
 spec:
   commonConfig: mypublished
   readOnly: false
