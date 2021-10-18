@@ -1,0 +1,18 @@
+apiVersion: kuttl.dev/v1beta1
+kind: TestStep
+delete:
+- apiVersion: samba-operator.samba.org/v1alpha1
+  kind: SmbShare
+  name: myshare
+- apiVersion: samba-operator.samba.org/v1alpha1
+  kind: SmbSecurityConfig
+  name: mysmbusers
+- apiVersion: v1
+  kind: Secret
+  name: smbuser
+- apiVersion: v1
+  kind: Pod
+  name: smbclient
+- apiVersion: v1
+  kind: ConfigMap
+  name: smbclient-config
