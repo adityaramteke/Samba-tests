@@ -2,4 +2,8 @@ apiVersion: kuttl.dev/v1beta1
 kind: TestSuite
 testDirs:
 - ./kuttl-test/e2e/
+namespace: samba-operator-system
 startKIND: false
+parallel: 1
+commands:
+  - script: (cd ../samba-operator/ && make deploy)
