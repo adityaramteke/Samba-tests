@@ -1,0 +1,30 @@
+---
+apiVersion: v1
+kind: Secret
+metadata:
+  name: smbuser
+
+---
+apiVersion: samba-operator.samba.org/v1alpha1
+kind: SmbSecurityConfig
+metadata:
+  name: mysmbusers
+
+---
+apiVersion: samba-operator.samba.org/v1alpha1
+kind: SmbShare
+metadata:
+  name: myshare
+
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: myshare
+
+---
+apiVersion: v1
+kind: Pod
+metadata:
+  labels:
+    app: samba-operator-test-smbclient
